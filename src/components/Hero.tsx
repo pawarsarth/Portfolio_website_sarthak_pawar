@@ -1,9 +1,9 @@
-import profilePic from '../assets/photo.jpg'; // adjust path based on your folder structure
+import profilePic from '../assets/photo.jpg'; // make sure this image exists in src/assets/
 
 export function Hero() {
   return (
     <section className="h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left bg-gradient-to-b from-black via-gray-900 to-black px-6 gap-10 md:gap-20">
-      {/* Profile Image */}
+      {/* ---- Profile Image ---- */}
       <div className="relative w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg hover:scale-105 transition-transform">
         <img
           src={profilePic}
@@ -12,7 +12,7 @@ export function Hero() {
         />
       </div>
 
-      {/* Text Section */}
+      {/* ---- Hero Text ---- */}
       <div className="max-w-xl">
         <h1 className="text-5xl md:text-6xl font-extrabold mb-3">
           Hi, I'm <span className="text-purple-500">Sarthak Pawar</span>
@@ -20,7 +20,9 @@ export function Hero() {
         <p className="text-xl text-gray-300 mb-6">
           Full Stack Developer | AI Innovator | Problem Solver
         </p>
-        <div className="flex gap-5 justify-center md:justify-start">
+
+        {/* ---- Social Links ---- */}
+        <div className="flex gap-5 justify-center md:justify-start mb-6">
           <a
             href="https://github.com/pawarsarth"
             target="_blank"
@@ -43,12 +45,25 @@ export function Hero() {
           </a>
         </div>
 
-        <a
-          href="#projects"
-          className="inline-block mt-8 bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300"
-        >
-          View My Work
-        </a>
+        {/* ---- Buttons ---- */}
+        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+          <a
+            href="#projects"
+            className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300"
+          >
+            View My Work
+          </a>
+
+          {/* Resume Button */}
+          <a
+            href="https://drive.google.com/file/d/1bDZPop0WrAYAS4nEyzzYQJNiWUokPsBf/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-purple-500 text-purple-400 hover:bg-purple-600 hover:text-white px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300"
+          >
+            View Resume
+          </a>
+        </div>
       </div>
     </section>
   );
